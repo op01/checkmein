@@ -5,7 +5,6 @@ A check in app demonstrating the basic use of Storage API and Geography Points
 ### Usage
 - Clone this repository
 - Make sure you have [node.js](https://nodejs.org/) installed
-- Run `npm install ` to install global dependencies
 - Run `npm install` to install dependencies
 - Run `npm start` to start the server
 - Open browser to [`http://localhost:3000`](http://localhost:3000)

@@ -1,0 +1,27 @@
+<h3>Let's checkin</h3>
+<p>Post a photo and type some messages</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="input-group">
+            <span class="input-group-addon">Message:</span>
+            <textarea class="form-control" rows="4" [(ngModel)]="message"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <label class="btn btn-default">
+                        Browse <input type="file" accept="image/*" (change)="onImageChange($event)" required style="display: none;">
+                    </label>
+                </span>
+                <input type="text" disabled class="form-control" value="{{filename}}">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-primary" (click)="submit()">Submit</button>
+        </div>
+    </div>
+</div>

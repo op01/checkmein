@@ -8,10 +8,11 @@ import {Backand} from '../../services/backand';
   templateUrl: 'checkmein/components/query/query.html'
 })
 export class Query {
+  within:number=50;
   constructor(private locationService:LocationService,private mapService:MapService,private backand:Backand) {}
   query(){
     let location = this.locationService.location;
-    this.backand.getCheckin(location,100)
+    this.backand.getCheckin(location,this.within)
       .subscribe(x=>{
         this.mapService.displayMarkers(x);
       });
